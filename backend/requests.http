@@ -1,0 +1,28 @@
+@base = http://localhost:4000
+
+GET {{base}}/health
+
+###
+GET {{base}}/api/shipments?status=IN_TRANSIT&page=1&limit=10
+
+###
+GET {{base}}/api/shipments?q=NGK-2026-1003
+
+###
+POST {{base}}/api/shipments
+Content-Type: application/json
+
+{
+  "referenceNumber": "NGK-2026-9001",
+  "origin": "Nhava Sheva, IN",
+  "destination": "Jebel Ali, AE",
+  "expectedDelivery": "2026-10-15",
+  "carrier": "Maersk",
+  "weightKg": 1250
+}
+
+###
+PATCH {{base}}/api/shipments/PASTE_ID_HERE/status
+Content-Type: application/json
+
+{ "status": "IN_TRANSIT", "note": "Vessel departed", "location": "Nhava Sheva, IN" }
