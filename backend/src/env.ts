@@ -1,6 +1,5 @@
 import "dotenv/config";
 import { z } from "zod";
-import { process } from "zod/v4/core/to-json-schema.cjs";
 
 const schema = z.object({
   DATABASE_URL: z.string().min(1),
