@@ -3,8 +3,8 @@
 
 A full-stack app for tracking shipments through their lifecycle — booked, in transit, customs hold, delivered, the works. Built for Nagarkot's take-home assignment.
 
-**Live app:** https://ajinkya.tail32b205.ts.net:10001
-**API:** https://ajinkya.tail32b205.ts.net:10000 · health check at `/health`
+**Live app:** https://ajinkya.tail32b205.ts.net:10000
+**API:** https://ajinkya.tail32b205.ts.net:8443 · health check at `/health`
 
 A quick note on the deployment: instead of Vercel/Render, I deployed this on my own home server (a repurposed HP running Ubuntu, Docker Compose for both services, Postgres included), exposed publicly through Tailscale Funnel. I run a small self-hosted setup already (Nextcloud, Immich, a monitoring stack, that kind of thing) so this was a natural fit and let me show that side of what I do too. Both services are Dockerized so they'd deploy the exact same way on Render/Fly/wherever if that's preferred — happy to spin that up too if it matters for grading.
 
